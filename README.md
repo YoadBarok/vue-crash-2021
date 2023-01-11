@@ -1,19 +1,7 @@
-# vue-crash-2021
+# Vue practice
 
-## Project setup
-```
-npm install
-```
+Task tracker app built following a youtube tutorial to practice Vue.js
+<a href="https://www.youtube.com/watch?v=qZXt1Aom3Cs&t=486s" target="_blank">Link to tutorial</a>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
