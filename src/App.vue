@@ -10,9 +10,10 @@
 </template>
 
 <script>
-import Header from './components/Header'
-import Tasks from './components/Tasks'
-import AddTask from './components/AddTask'
+import Header from './components/Header';
+import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
+import axios from 'axios';
 
 export default {
   name: 'App',
@@ -25,6 +26,7 @@ export default {
     return {
       tasks: [],
       showAddTask: false,
+      testText: ''
     }
   },
   methods: {
@@ -43,7 +45,7 @@ export default {
       this.showAddTask = !this.showAddTask;
     }
   },
-  created() {
+  async created() {
     this.tasks = [
       {
         id: 1,
@@ -63,7 +65,9 @@ export default {
         day: 'March 3rd at 11:00am',
         reminder: false,
       },
-    ]
+    ];
+    const response = await axios.get("http://127.0.0.1:3002/");
+    console.log(response.data);
   }
 }
 </script>
