@@ -1,5 +1,5 @@
 <template>
-    <button :style="{background: color}" class="btn">{{ text }}</button>
+    <button :style="{background: color}" @click="onClick()" class="btn">{{ text }}</button>
 </template>
 
 
@@ -11,6 +11,11 @@
             color: {
                 type: String,
                 default: 'black'
+            }
+        },
+        methods: {
+            onClick() {
+                this.$emit('btn-click')
             }
         }
 
